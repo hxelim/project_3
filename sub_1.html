@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>피자 주문</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <style>
+    h3 {font-size: var(--size-l); line-height: 110%;}
+    h4 {font-size: var(--size-m); line-height: 110%;}
+    p {font-size: var(--size-s); line-height: 110%;}
+    h6 {font-size: var(--size-xs); line-height: 110%;}
+
+
+    body {background-color: var(--beige); font-family: var(--kor);}
+
+    #wrap {width: 1300px; height: auto; margin: 100px auto; }
+
+
+    /* 피자 선택 */
+    #main {background-color: pink; width: 100%; height: 1000px; margin-bottom: 50px; display: flex; flex-wrap: wrap; justify-content: center; align-content: space-between; }
+    .size {width: 200PX; height: 75px; display: flex; flex-wrap: wrap; align-content: space-between; text-align: center; font-family: var(--eng);}
+    .size>p {width: 100%}
+    .sizeOpt {display: flex; justify-content: space-between; width: 100%;}
+    .sizeOpt P {background-color: var(--darkgreen); width: 20%; height: 40px; line-height: 40px; border-radius: 50%;}
+    .menu {width: 100%; }
+    .pizzaWrap {width: 100% ; height: 650px; background-color: gray; overflow: hidden;}
+    .pizzaWrap>.pizza {width: 100%; height: 200%; background-color: cyan; border-radius: 50%; }
+    .pizzaName {width: 100%; height: 150px; background-color: gold; text-align: center; margin-top: 50px; display: flex; flex-direction: column; justify-content: space-between;}
+    .pizzaName h4 {font-family: var(--eng); font-weight: var(--weight-r);}
+
+
+
+
+    /* 옵션 선택창 */
+    #select {background-color: lightpink; width: 100%; display: flex; justify-content: center; flex-wrap: wrap; align-content: space-between; margin-bottom: 100px;}
+    .option {width: 100%;  height: 900px; display: flex; justify-content: space-between;}
+    .option .boxR {width: 59%; background-color: var(--lightred); height: 100%; border-radius: 50px;}
+    .option .boxL {width: 39%; background-color: var(--lightred); height: 100%;  border-radius: 50px;}
+
+
+
+    /* 정보 */
+    #info {background-color: gold; width: 100%; height: 850px; display: flex; flex-wrap: wrap; align-content: space-between;}
+    .nut {background-color: lightblue; width: 100%; height: 350px;}
+    .allergy {background-color: lightblue; width: 100%; height: 150px; }
+    .org {background-color: lightblue; width: 100%; height: 180px;}
+
+  </style>
+</head>
+<body>
+  <div id="wrap">
+
+    <!-- 피자 선택 -->
+    <div id="main">
+      <div class="size">
+        <p>SELECT SIZE</p>
+        <div class="sizeOpt">
+          <p>S</p>
+          <p>M</p>
+          <p>L</p>
+          <p>XL</p>
+        </div>
+      </div>
+      <div class="menu">
+        <div class="pizzaWrap">
+          <div class="pizza"></div>
+        </div>
+        <div class="pizzaName">
+          <h3>갈릭 쉬림프 피자</h3>
+          <h4>Garlic Shrimflex Pizza</h4>
+          <br>
+          <p>풍미를 한껏 끌어올린 갈릭소스와 스위트칠리소스에 탱글탱글 통새우까지!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 옵선 선택창 -->
+    <div id="select">
+      <div class="option">
+        <div class="boxR"></div>
+        <div class="boxL"></div>
+      </div>
+    </div>
+
+    <!-- 정보 -->
+    <div id="info">
+      <div class="nut"></div>
+      <div class="allergy"></div>
+      <div class="org"></div>
+    </div>
+  </div>
+</body>
+</html>
