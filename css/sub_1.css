@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+h3 {font-size: var(--size-l); line-height: 110%;}
+h4 {font-size: var(--size-m); line-height: 110%;}
+p, li {font-size: var(--size-s); line-height: 110%;}
+h6 {font-size: var(--size-xs); line-height: 110%;}
+th, td {font-size: var(--size-s);}
+button {font-size: var(--size-s);}
+
+/* body {background-color: var(--beige); font-family: var(--kor);} */
+#wrap {width: 1300px; height: auto; margin: 100px auto;}
+
+/* 피자 선택 */
+#main {width: 100%; height: 1000px; margin-bottom: 50px; display: flex; flex-wrap: wrap; justify-content: center; align-content: space-between;}
+.size {width: 200PX; height: 75px; display: flex; flex-wrap: wrap; align-content: space-between; text-align: center; font-family: var(--eng);}
+.size>p { width: 100% }
+.sizeOpt {display: flex; justify-content: space-between; width: 100%;}
+.sizeOpt P { background-color: var(--darkgreen); width: 20%; height: 40px; line-height: 40px; border-radius: 50%;}
+.menu {width: 100%;}
+.pizzaWrap {width: 100%; height: 650px; overflow: hidden;}
+.pizzaWrap>.pizzaL {width: 100%; height: 200%; border: 1px solid var(--black); border-radius: 50%; padding: 5%;}
+.pizzaM {width: 100%; height: 100%;  border-radius: 50%; border: 1px solid var(--black); padding: 5%;}
+.pizzaS {width: 100%; height: 100%;  border-radius: 50%;}
+.pizzaS img {width: 100%; height: 100%;}
+.pizzaName {width: 100%; height: 150px; text-align: center; margin-top: 50px;
+display: flex; flex-direction: column;justify-content: space-between;}
+.pizzaName h4 {font-family: var(--eng);font-weight: var(--weight-r);}
+
+
+/* 옵션 선택창 */
+#select {width: 100%; display: flex; justify-content: center; flex-wrap: wrap; align-content: space-between; margin-bottom: 100px;}
+#select h4 {line-height: 150%;  margin: 2% 0; }
+.option {width: 100%; height: 900px; display: flex; justify-content: space-between;}
+.option .boxL { width: 59%; background-color: var(--lightred); height: 100%; border-radius: 50px; padding: 1.2% 2%; display: flex; flex-wrap: wrap; align-content: space-around;}
+.option .boxL .dough {width: 100%; height: 30%; display: flex ; flex-wrap: wrap; justify-content: center; background-color: var(--white); border-radius: 30px; padding: 0 5%;}
+.option .boxL .dough ul {width: 100%; display: flex;}
+.option .boxL .dough ul li {width: 20%; padding: 10px; text-align: center; cursor: pointer; } 
+.option .boxL .dough ul li:after {content: ""; position: absolute; top:0 ; left: 0; background-color: var(--lightgray);}  
+.option .boxL .dough ul li img {width: 100%; position: relative;}
+
+.option .boxL .add {width: 100%; height: 65%; background-color: var(--white); border-radius: 30px; display: flex; flex-wrap: wrap; justify-content: center; }
+.option .boxL .add ul {display: flex; flex-wrap: wrap; height: 80%; justify-content: space-evenly;}
+.option .boxL .add li {width: 35%;}
+.option .boxL .add li input[type="checkbox"] {width: 4rem; height: 4rem; accent-color: var(--darkgreen); }
+.option .boxL .add li p {display: inline;}
+.option .boxL .add li p span {font-size: var(--size-s);}
+
+
+.option .boxR { width: 39%; background-color: var(--lightred); height: 100%; border-radius: 50px;  padding: 2%; display: flex; flex-wrap: wrap; justify-content: center; align-content: space-between;} 
+.count {display: flex;; align-items: center; flex-wrap: wrap; justify-content: center;}
+.count h4 {width: 100%; text-align: center;}
+.count h6 {font-weight: var(--weight-t); text-align: right; width: 60%;; line-height: 150%;}
+
+.countbox {background-color: var(--white); width: 60%; height: 40px; display: flex; justify-content: space-between; border-radius: 50px;}
+.countbox .minus, input, .plus {border: none; background: none; line-height: 100%;  text-align: center;}
+.countbox button {width: 20%; font-size: var(--size-s);}
+.countbox input[type="text"] {width: 60%; font-size: var(--size-s);}
+
+.receipt {width: 100%; height: 83%; background-color: var(--white); border-radius: 30px; display: flex; flex-wrap: wrap; justify-content: center; padding: 8%; align-content: space-between;}
+.receipt .nameWrap {width: 100%; text-align: center; border-top: 1px solid black; border-bottom: 1px solid black; display: flex; justify-content: center;}
+.receipt .name {text-align: center; font-weight: var(--weight-r); width: 60%;  }
+
+.confirm {width: 100%; height: 60%; background-color: aliceblue; display: flex;}
+.confirm .addlist {width: 55%; height: 100%; background-color: bisque;}
+.confirm .plus {width: 5%; height: 100%; background-color: blueviolet;} 
+.confirm .addprice {width: 40%; height: 100%; background-color: aquamarine;}
+.total {width: 100%;}
+.total h4 {text-align: right;}
+
+.order {width: 100%; display: flex; justify-content: center;}
+.order button {width: 50%; height: 80px; margin:0 5px; background-color: var(--lightgreen); border: none;}
+.order button:nth-of-type(1) {border-radius:  50px 0  0 50px; padding-left: 10px;}
+.order button:nth-of-type(2) {border-radius: 0 50px 50px 0px; padding-right: 10px;}
+
+/* 정보 */
+#info {width: 100%; height: 850px; display: flex; flex-wrap: wrap; align-content: space-between;}
+#info h4 {line-height: 150%;}
+.nut {width: 100%; }
+.nut table {width: 100%; height: 360px; text-align: center; border-bottom: 1px solid var(--lightgray); border-top: 1px solid var(--lightgray);border-collapse: collapse;}
+.nut table thead  {height: 20%;}
+.nut table thead th {border-bottom: 1px solid var(--lightgray); line-height: 100%;}
+.nut th {width: 11.1111%;}
+.nut th span {font-size: var(--size-xs);}
+.nut tbody {color: var(--lightgray)}
+
+.allergy {width: 100%; height: 150px; display: flex; flex-direction: column; justify-content: space-between;}
+.allergy table {height: 85%; text-align: center; line-height: 85%; border-bottom: 1px solid var(--lightgray); border-top: 1px solid var(--lightgray);}
+.allergy table td {color: var(--lightgray)}
+.org {width: 100%; height: 150px; display: flex; flex-direction: column; justify-content: space-between;}
+.org table {height: 85%; text-align: center; line-height: 85%; border-bottom: 1px solid var(--lightgray); border-top: 1px solid var(--lightgray);}
+.org table td {color: var(--lightgray)}
