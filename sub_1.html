@@ -7,6 +7,9 @@
   <title>피자 주문</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/sub_1.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/jquery.lettering.js"></script>
+  <script src="js/sub_1.js"></script>
 </head>
 
 <body>
@@ -17,24 +20,47 @@
       <div class="size">
         <p>SELECT SIZE</p>
         <div class="sizeOpt">
-          <p>S</p>
-          <p>M</p>
-          <p>L</p>
-          <p>XL</p>
+          <label>
+            <input type="radio" name="size" id="sS">
+            <p>S</p>
+          </label>
+          <label>
+            <input type="radio" name="size" id="sM" checked>
+            <p>M</p>
+          </label>
+          <label>
+            <input type="radio" name="size" id="sL">
+            <p>L</p>
+          </label>
+          <label>
+            <input type="radio" name="size" id="sXL">
+            <p>XL</p>
+          </label>
         </div>
       </div>
       <div class="menu">
         <div class="pizzaWrap">
+          <p><span class="round">멕시칸타코</span><span class="dot"></span></p>
+          <p><span class="round">페스티벌</span><span class="dot"></span></p>
+          <p><span class="round">7번가 스페셜</span><span class="dot"></span></p>
+          <p><span class="round">샘스테이크</span><span class="dot"></span></p>
+          <p><span class="round">갈릭 쉬림플렉스 피자</span><span class="dot"></span></p>
+          <p><span class="round">흥부박포테이토</span><span class="dot"></span></p>
+          <p><span class="round">리치고구마치킨</span><span class="dot"></span></p>
+          <p><span class="round">칠리불갈비</span><span class="dot"></span></p>
+          <p><span class="round">크림치즈볼</span><span class="dot"></span></p>
+
           <div class="pizzaL">
+
             <div class="pizzaM">
               <div class="pizzaS">
-                <img src="img/sub_1/pizza_garlicshrimp_f.png" alt="">
+                <img src="img/sub_1/pizza_garlicshrimp_ff.png" alt="">
               </div>
             </div>
           </div>
         </div>
         <div class="pizzaName">
-          <h3>갈릭 쉬림프 피자</h3>
+          <h3>갈릭 쉬림플렉스 피자</h3>
           <h4>Garlic Shrimflex Pizza</h4>
           <br>
           <p>풍미를 한껏 끌어올린 갈릭소스와 스위트칠리소스에 탱글탱글 통새우까지!</p>
@@ -48,6 +74,15 @@
         <div class="boxL">
           <div class="dough">
             <h4>도우 선택</h4>
+            <label>
+              <input type="radio" name="" id="" checked>
+              <i></i>
+              <img src="img/sub_1/dough1.png" alt="">
+              <p>석쇠 <br> (+0원)</p>
+            </label>
+
+
+
             <ul>
               <li>
                 <img src="img/sub_1/dough1.png" alt="">
@@ -77,73 +112,73 @@
               <li>
                 <input type="checkbox" name="topping" id="t1">
                 <label for="t1">
-                  <p>치즈 추가 80g(+<span>2,500원</span>)</p>
+                  <p>&nbsp;치즈 추가 80g(+<span>2,500원</span>)</p>
                 </label>
               </li>
               <li>
                 <input type="checkbox" name="topping" id="t2">
                 <label for="t2">
-                  <p>페퍼로니 42g(+<span>2,000원</span>)</p>
+                  <p>&nbsp;페퍼로니 42g(+<span>2,000원</span>)</p>
                 </label>
               </li>
               <li>
                 <input type="checkbox" name="topping" id="t3">
                 <label for="t3">
-                  <p>베이컨 42g(+<span>2,000원</span>)</p>
+                  <p>&nbsp;베이컨 42g(+<span>2,000원</span>)</p>
                 </label>
               </li>
               <li>
                 <input type="checkbox" name="topping" id="t4">
                 <label for="t4">
-                  <p>블랙올리브 32g(+<span>1,000원</span>)</p>
+                  <p>&nbsp;블랙올리브 32g(+<span>1,000원</span>)</p>
                 </label>
               </li>
               <li>
                 <input type="checkbox" name="topping" id="t5">
                 <label for="t5">
-                  <p>파인애플 80g(+<span>1,500원</span>)</p>
+                  <p>&nbsp;파인애플 80g(+<span>1,500원</span>)</p>
                 </label>
               </li>
               <li>
                 <input type="checkbox" name="topping" id="t6">
                 <label for="t6">
-                  <p>브로콜리 35g(+<span>1,500원</span>)</p>
+                  <p>&nbsp;브로콜리 35g(+<span>1,500원</span>)</p>
                 </label>
               </li>
               <li>
                 <input type="checkbox" name="topping" id="t7">
                 <label for="t7">
-                  <p>양파 45g(+<span>1,500원</span>)</p>
+                  <p>&nbsp;양파 45g(+<span>1,500원</span>)</p>
                 </label>
               </li>
               <li>
                 <input type="checkbox" name="topping" id="t8">
                 <label for="t8">
-                  <p>할라피뇨 30g(+<span>1,000원</span>)</p>
+                  <p>&nbsp;할라피뇨 30g(+<span>1,000원</span>)</p>
                 </label>
               </li>
               <li>
                 <input type="checkbox" name="topping" id="t9">
                 <label for="t9">
-                  <p>청피망 30g(+<span>1,000원</span>)</p>
+                  <p>&nbsp;청피망 30g(+<span>1,000원</span>)</p>
                 </label>
               </li>
               <li>
                 <input type="checkbox" name="topping" id="t10">
                 <label for="t10">
-                  <p>버섯 60g(+<span>1,500원</span>)</p>
+                  <p>&nbsp;버섯 60g(+<span>1,500원</span>)</p>
                 </label>
               </li>
               <li>
                 <input type="checkbox" name="topping" id="t11">
                 <label for="t11">
-                  <p>청피망 30g(+<span>1,000원</span>)</p>
+                  <p>&nbsp;청피망 30g(+<span>1,000원</span>)</p>
                 </label>
               </li>
               <li>
                 <input type="checkbox" name="topping" id="t12">
                 <label for="t12">
-                  <p>버섯 60g(+<span>1,500원</span>)</p>
+                  <p>&nbsp;버섯 60g(+<span>1,500원</span>)</p>
                 </label>
               </li>
             </ul>
@@ -160,9 +195,9 @@
             <h6>최대 5개까지 선택할 수 있습니다.</h6>
           </div>
           <div class="receipt">
-              <div class="nameWrap">
-                <h4 class="name">갈릭 쉬림프 피자</h4>
-              </div>
+            <div class="nameWrap">
+              <h4 class="name">갈릭 쉬림프 피자</h4>
+            </div>
             <div class="confirm">
               <div class="addlist">
                 <p></p>
@@ -177,7 +212,7 @@
             <div class="total">
               <h4>32,000원</h4>
             </div>
-            
+
             <div class="order">
               <button class="delivery">배달 주문</button>
               <button class="takeaway">포장 주문</button>

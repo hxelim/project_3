@@ -11,14 +11,37 @@ button {font-size: var(--size-s);}
 #wrap {width: 1300px; height: auto; margin: 100px auto;}
 
 /* 피자 선택 */
-#main {width: 100%; height: 1000px; margin-bottom: 50px; display: flex; flex-wrap: wrap; justify-content: center; align-content: space-between;}
-.size {width: 200PX; height: 75px; display: flex; flex-wrap: wrap; align-content: space-between; text-align: center; font-family: var(--eng);}
+#main {width: 100%; margin-bottom: 50px; display: flex; flex-wrap: wrap; justify-content: center; align-content: space-between;}
+.size {width: 200PX; height: 75px; display: flex; flex-wrap: wrap; align-content: space-between; text-align: center; font-family: var(--eng); margin-bottom: 50px;}
 .size>p { width: 100% }
 .sizeOpt {display: flex; justify-content: space-between; width: 100%;}
-.sizeOpt P { background-color: var(--darkgreen); width: 20%; height: 40px; line-height: 40px; border-radius: 50%;}
+.sizeOpt label {width: 20%;}
+.sizeOpt label input {display: none;}
+.sizeOpt label input:checked + p {background-color:var(--darkred);}
+.sizeOpt P { background-color: var(--darkgreen); height: 40px; line-height: 40px; border-radius: 50%;}
+
+
+
 .menu {width: 100%;}
-.pizzaWrap {width: 100%; height: 650px; overflow: hidden;}
-.pizzaWrap>.pizzaL {width: 100%; height: 200%; border: 1px solid var(--black); border-radius: 50%; padding: 5%;}
+.pizzaWrap {width: 100%; height: 670px; padding: 50px 30px 0 30px; overflow: hidden;position: relative;}
+.pizzaWrap>.pizzaL {width: 100%; height: 200%; border: 2px solid var(--black); border-radius: 50%; padding: 5%; }
+.pizzaWrap p {position: absolute; }
+.pizzaWrap .round {height: 200px; width: 20px; left: 0; top:0; transform-origin: bottom center; }
+.pizzaWrap p .dot {display: block; width: 10px; height: 10px; background-color: black; border-radius: 50%; margin: 15px auto;}
+.pizzaWrap p:nth-of-type(1) {top: 70%; left: 3.9%; transform: translateX(-50%);}
+.pizzaWrap p:nth-of-type(2) {top: 42.8%; left: 10.1%; transform: translateX(-50%);}
+.pizzaWrap p:nth-of-type(3) {top: 21%; left: 20.4%; transform: translateX(-50%);}
+.pizzaWrap p:nth-of-type(4) {top: 6.4%; left: 34%; transform: translateX(-50%);}
+.pizzaWrap p:nth-of-type(5) {top: 1.2%; left: 50%; transform: translateX(-50%);}
+.pizzaWrap p:nth-of-type(6) {top: 6.4%; right: 30.3%; ;}
+.pizzaWrap p:nth-of-type(7) {top: 21%; right: 16.8%; }
+.pizzaWrap p:nth-of-type(8) {top: 42.8%; right: 7.4%;}
+/* .pizzaWrap p:nth-of-type(9) {top: 70%; right: 1.2%; transform: rotate(10deg);} */
+.pizzaWrap p:nth-of-type(9) {top: 70%; right: 2.5%; transform: rotate(78deg); transform-origin: bottom center;}
+
+
+
+
 .pizzaM {width: 100%; height: 100%;  border-radius: 50%; border: 1px solid var(--black); padding: 5%;}
 .pizzaS {width: 100%; height: 100%;  border-radius: 50%;}
 .pizzaS img {width: 100%; height: 100%;}
@@ -32,18 +55,36 @@ display: flex; flex-direction: column;justify-content: space-between;}
 #select h4 {line-height: 150%;  margin: 2% 0; }
 .option {width: 100%; height: 900px; display: flex; justify-content: space-between;}
 .option .boxL { width: 59%; background-color: var(--lightred); height: 100%; border-radius: 50px; padding: 1.2% 2%; display: flex; flex-wrap: wrap; align-content: space-around;}
+
+
+
+
 .option .boxL .dough {width: 100%; height: 30%; display: flex ; flex-wrap: wrap; justify-content: center; background-color: var(--white); border-radius: 30px; padding: 0 5%;}
 .option .boxL .dough ul {width: 100%; display: flex;}
 .option .boxL .dough ul li {width: 20%; padding: 10px; text-align: center; cursor: pointer; } 
-.option .boxL .dough ul li:after {content: ""; position: absolute; top:0 ; left: 0; background-color: var(--lightgray);}  
 .option .boxL .dough ul li img {width: 100%; position: relative;}
+.active {background-color: var(--darkred);}
+
+/* .option .boxL .dough label input {display: none;} */
+/* .option .boxL .dough label img {position: relative;} */
+.option .boxL .dough label i {content: ""; background-color: cyan; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block;}
+
+
+
 
 .option .boxL .add {width: 100%; height: 65%; background-color: var(--white); border-radius: 30px; display: flex; flex-wrap: wrap; justify-content: center; }
 .option .boxL .add ul {display: flex; flex-wrap: wrap; height: 80%; justify-content: space-evenly;}
-.option .boxL .add li {width: 35%;}
-.option .boxL .add li input[type="checkbox"] {width: 4rem; height: 4rem; accent-color: var(--darkgreen); }
+.option .boxL .add li {width: 36%;}
+
+.option .boxL .add li input[type="checkbox"] {display: none; }
+.option .boxL .add li input[type = "checkbox"] + label {cursor: pointer; display: flex; align-items: center;}
+.option .boxL .add li input[type = "checkbox"] + label:before {content: " "; display: inline-block; width: 4rem; height: 4rem; background-color: var(--lightgreen); vertical-align: middle;}
+.option .boxL .add li input[type = "checkbox"]:checked + label:before {content: ""; background-color: var(--darkgreen); vertical-align: middle; background-image: url('../img/sub_1/btn_check.png'); background-position: center; background-repeat: no-repeat;}
+
+
 .option .boxL .add li p {display: inline;}
 .option .boxL .add li p span {font-size: var(--size-s);}
+
 
 
 .option .boxR { width: 39%; background-color: var(--lightred); height: 100%; border-radius: 50px;  padding: 2%; display: flex; flex-wrap: wrap; justify-content: center; align-content: space-between;} 
