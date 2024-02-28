@@ -25,19 +25,37 @@ button {font-size: var(--size-s);}
 .menu {width: 100%;}
 .pizzaWrap {width: 100%; height: 670px; padding: 50px 30px 0 30px; overflow: hidden;position: relative;}
 .pizzaWrap>.pizzaL {width: 100%; height: 200%; border: 2px solid var(--black); border-radius: 50%; padding: 5%; }
-.pizzaWrap p {position: absolute; }
+.pizzaWrap > div {position: absolute; }
 .pizzaWrap .round {height: 200px; width: 20px; left: 0; top:0; transform-origin: bottom center; }
-.pizzaWrap p .dot {display: block; width: 10px; height: 10px; background-color: black; border-radius: 50%; margin: 15px auto;}
-.pizzaWrap p:nth-of-type(1) {top: 70%; left: 3.9%; transform: translateX(-50%);}
-.pizzaWrap p:nth-of-type(2) {top: 42.8%; left: 10.1%; transform: translateX(-50%);}
-.pizzaWrap p:nth-of-type(3) {top: 21%; left: 20.4%; transform: translateX(-50%);}
-.pizzaWrap p:nth-of-type(4) {top: 6.4%; left: 34%; transform: translateX(-50%);}
-.pizzaWrap p:nth-of-type(5) {top: 1.2%; left: 50%; transform: translateX(-50%);}
-.pizzaWrap p:nth-of-type(6) {top: 6.4%; right: 30.3%; ;}
-.pizzaWrap p:nth-of-type(7) {top: 21%; right: 16.8%; }
-.pizzaWrap p:nth-of-type(8) {top: 42.8%; right: 7.4%;}
-/* .pizzaWrap p:nth-of-type(9) {top: 70%; right: 1.2%; transform: rotate(10deg);} */
-.pizzaWrap p:nth-of-type(9) {top: 70%; right: 2.5%; transform: rotate(78deg); transform-origin: bottom center;}
+.pizzaWrap .dot {display: block; width: 10px; height: 10px; background-color: black; border-radius: 50%; margin: 15px auto;}
+
+.pizzaWrap >div span {
+  height: 200px;
+  position: absolute;
+  width: 20px;
+  left: 0;
+  top: 0;
+  transform-origin: bottom center;
+}
+.char1 { transform: rotate(0deg); }
+.char2 { transform: rotate(6deg); }
+.char3 { transform: rotate(12deg); }
+.char4 { transform: rotate(18deg); }
+.char5 { transform: rotate(24deg); }
+.char6 { transform: rotate(30deg); }
+.char7 { transform: rotate(36deg); }
+.char8 { transform: rotate(42deg); }
+.char9 { transform: rotate(48deg); }
+
+/* .pizzaWrap > div:nth-of-type(1) {top: 70%; left: 3.9%; transform: translateX(-50%) rotate(-80deg); }
+.pizzaWrap > div:nth-of-type(2) {top: 42.8%; left: 10.1%; transform: translateX(-50%);}
+.pizzaWrap > div:nth-of-type(3) {top: 21%; left: 20.4%; transform: translateX(-50%);}
+.pizzaWrap > div:nth-of-type(4) {top: 6.4%; left: 34%; transform: translateX(-50%);}
+.pizzaWrap > div:nth-of-type(5) {top: 1.2%; left: 50%; transform: translateX(-50%);}
+.pizzaWrap > div:nth-of-type(6) {top: 6.4%; right: 30.3%; ;}
+.pizzaWrap > div:nth-of-type(7) {top: 21%; right: 16.8%; }
+.pizzaWrap > div:nth-of-type(8) {top: 42.8%; right: 7.4%;}
+.pizzaWrap > div:nth-of-type(9) {top: 70%; right: 2.5%;} */
 
 
 
@@ -60,15 +78,16 @@ display: flex; flex-direction: column;justify-content: space-between;}
 
 
 .option .boxL .dough {width: 100%; height: 30%; display: flex ; flex-wrap: wrap; justify-content: center; background-color: var(--white); border-radius: 30px; padding: 0 5%;}
-.option .boxL .dough ul {width: 100%; display: flex;}
-.option .boxL .dough ul li {width: 20%; padding: 10px; text-align: center; cursor: pointer; } 
-.option .boxL .dough ul li img {width: 100%; position: relative;}
-.active {background-color: var(--darkred);}
+.dough h4 {margin: 0;}
+.dough .edgelist {width: 100%; display: flex; justify-content: space-between; text-align: center;}
+.dough .edgelist label {width: 18%;}
 
-/* .option .boxL .dough label input {display: none;} */
-/* .option .boxL .dough label img {position: relative;} */
-.option .boxL .dough label i {content: ""; background-color: cyan; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block;}
-
+.dough label .edgeImg {position: relative; width: 100%; height: 55%;}
+.dough label .edgeImg img {width: 100%; height: 100%; object-fit: cover;}
+.option .boxL .dough label i {content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block;} 
+.dough label input {display: none;}
+.option .boxL .dough label input:checked + i { background-color:  rgba(236, 106, 64,0.8); }
+.option .boxL .dough label input:checked + i::after {content: ""; background-image: url(../img/sub_1/btn_check_b.png); position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block; background-repeat: no-repeat; background-position: center;}
 
 
 
@@ -90,16 +109,17 @@ display: flex; flex-direction: column;justify-content: space-between;}
 .option .boxR { width: 39%; background-color: var(--lightred); height: 100%; border-radius: 50px;  padding: 2%; display: flex; flex-wrap: wrap; justify-content: center; align-content: space-between;} 
 .count {display: flex;; align-items: center; flex-wrap: wrap; justify-content: center;}
 .count h4 {width: 100%; text-align: center;}
-.count h6 {font-weight: var(--weight-t); text-align: right; width: 60%;; line-height: 150%;}
+.count h6 {font-weight: var(--weight-t); text-align: right; width: 85%;; line-height: 150%;}
 
-.countbox {background-color: var(--white); width: 60%; height: 40px; display: flex; justify-content: space-between; border-radius: 50px;}
+.countbox {background-color: var(--white); width: 85%; height: 40px; display: flex; justify-content: space-between; border-radius: 50px; align-items: center;}
 .countbox .minus, input, .plus {border: none; background: none; line-height: 100%;  text-align: center;}
-.countbox button {width: 20%; font-size: var(--size-s);}
+.countbox button {width: 40%; font-size: var(--size-s);}
 .countbox input[type="text"] {width: 60%; font-size: var(--size-s);}
+.countbox #result {font-size: var(--size-s);}
 
 .receipt {width: 100%; height: 83%; background-color: var(--white); border-radius: 30px; display: flex; flex-wrap: wrap; justify-content: center; padding: 8%; align-content: space-between;}
 .receipt .nameWrap {width: 100%; text-align: center; border-top: 1px solid black; border-bottom: 1px solid black; display: flex; justify-content: center;}
-.receipt .name {text-align: center; font-weight: var(--weight-r); width: 60%;  }
+.receipt .name {text-align: center; font-weight: var(--weight-r); width: 75%;  }
 
 .confirm {width: 100%; height: 60%; background-color: aliceblue; display: flex;}
 .confirm .addlist {width: 55%; height: 100%; background-color: bisque;}
@@ -110,6 +130,7 @@ display: flex; flex-direction: column;justify-content: space-between;}
 
 .order {width: 100%; display: flex; justify-content: center;}
 .order button {width: 50%; height: 80px; margin:0 5px; background-color: var(--lightgreen); border: none;}
+.order button:hover {cursor: pointer; background-color: var(--darkgreen);  transform: scale(1.03);}
 .order button:nth-of-type(1) {border-radius:  50px 0  0 50px; padding-left: 10px;}
 .order button:nth-of-type(2) {border-radius: 0 50px 50px 0px; padding-right: 10px;}
 
