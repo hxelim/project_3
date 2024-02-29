@@ -21,53 +21,75 @@
         <p>SELECT SIZE</p>
         <div class="sizeOpt">
           <label>
-            <input type="radio" name="size" id="sS">
+            <input type="radio" name="size" id="sS" data-value="28000">
             <p>S</p>
           </label>
           <label>
-            <input type="radio" name="size" id="sM" checked>
+            <input type="radio" name="size" id="sM" data-value="32000" checked>
             <p>M</p>
           </label>
           <label>
-            <input type="radio" name="size" id="sL">
+            <input type="radio" name="size" id="sL" data-value="37000">
             <p>L</p>
           </label>
           <label>
-            <input type="radio" name="size" id="sXL">
+            <input type="radio" name="size" id="sXL" data-value="42000">
             <p>XL</p>
           </label>
         </div>
       </div>
       <div class="menu">
         <div class="pizzaWrap">
-          <div>
-            <p class="round">더블불고기피자</p>
+          <div class="pizzaT">
+            <p class="round ">더블불고기피자</p>
+          </div>
+          <div class="pizzaT">
+            <p class="round">페퍼로니피자</p>
+          </div>
+          <div class="pizzaT">
+            <p class="round">쿼터치즈벅피자</p>
+          </div>
+          <div class="pizzaT">
+            <p class="round">메가디럭스피자</p>
+          </div>
+          <div class="pizzaT">
+            <p class="round active">갈릭쉬림플렉스피자</p>
+          </div>
+          <div class="pizzaT">
+            <p class="round">슈퍼콤비네이션피자</p>
+          </div>
+          <div class="pizzaT">
+            <p class="round">베이컨포테마요피자</p>
+          </div>
+          <div class="pizzaT">
+            <p class="round">바질버터관자피자</p>
+          </div>
+          <div class="pizzaT">
+            <p class="round">하와이안피자</p>
           </div>
           <div class="dotWrap">
             <span class="dot"></span>
             <span class="dot"></span>
             <span class="dot"></span>
             <span class="dot"></span>
-            <span class="dot"></span>
+            <span class="dot border"></span>
             <span class="dot"></span>
             <span class="dot"></span>
             <span class="dot"></span>
             <span class="dot"></span>
           </div>
-          <!-- <div><p class="round">페퍼로니피자</p><span class="dot"></span></div>
-          <div><p class="round">쿼터치즈벅피자</p><span class="dot"></span></div>
-          <div><p class="round">메가디럭스피자</p><span class="dot"></span></div>
-          <div><p class="round">갈릭쉬림플렉스피자</p><span class="dot"></span></div>
-          <div><p class="round">슈퍼콤비네이션피자</p><span class="dot"></span></div>
-          <div><p class="round">베이컨포테마요피자</p><span class="dot"></span></div>
-          <div><p class="round">바질버터관자피자</p><span class="dot"></span></div>
-          <div><p class="round">하와이안피자</p><span class="dot"></span></div> -->
-
           <div class="pizzaL">
-
             <div class="pizzaM">
               <div class="pizzaS">
-                <!-- <img src="img/sub_1/pizza_garlicshrimp_ff.png" alt=""> -->
+                <img src="img/sub_1/pizza_doublebulgogi.png" class="pizzaP" alt="pizza">
+                <img src="img/sub_1/pizza_pepperoni.png" class="pizzaP" alt="pizza">
+                <img src="img/sub_1/pizza_quaterbug.png" class="pizzaP" alt="pizza">
+                <img src="img/sub_1/pizza_megadelux.png" class="pizzaP" alt="pizza">
+                <img src="img/sub_1/pizza_garlicshrimp.png" id="pizzaP" alt="pizza">
+                <img src="img/sub_1/pizza_supercombination.png" class="pizzaP" alt="pizza">
+                <img src="img/sub_1/pizza_baconpotato.png" class="pizzaP" alt="pizza">
+                <img src="img/sub_1/pizza_basilbutter.png" class="pizzaP" alt="pizza">
+                <img src="img/sub_1/pizza_hawaiian.png" class="pizzaP" alt="pizza">
               </div>
             </div>
           </div>
@@ -90,7 +112,7 @@
             <div class="edgelist">
               <label>
                 <div class="edgeImg">
-                  <input type="radio" name="edge" id="" checked>
+                  <input type="radio" name="edge" id="" data-value="0" checked>
                   <i></i>
                   <img src="img/sub_1/dough1.png" alt="">
                 </div>
@@ -98,7 +120,7 @@
               </label>
               <label>
                 <div class="edgeImg">
-                  <input type="radio" name="edge" id="">
+                  <input type="radio" name="edge" id="" data-value="0">
                   <i></i>
                   <img src="img/sub_1/dough2.png" alt="">
                 </div>
@@ -106,7 +128,7 @@
               </label>
               <label>
                 <div class="edgeImg">
-                  <input type="radio" name="edge" id="">
+                  <input type="radio" name="edge" id="" data-value="3000">
                   <i></i>
                   <img src="img/sub_1/dough3.png" alt="">
                 </div>
@@ -114,7 +136,7 @@
               </label>
               <label>
                 <div class="edgeImg">
-                  <input type="radio" name="edge" id="">
+                  <input type="radio" name="edge" id="" data-value="3000">
                   <i></i>
                   <img src="img/sub_1/dough4.png" alt="">
                 </div>
@@ -122,7 +144,7 @@
               </label>
               <label>
                 <div class="edgeImg">
-                  <input type="radio" name="edge" id="">
+                  <input type="radio" name="edge" id="" data-value="4000">
                   <i></i>
                   <img src="img/sub_1/dough5.png" alt="">
                 </div>
@@ -134,73 +156,73 @@
             <h4>추가 토핑</h4>
             <ul>
               <li>
-                <input type="checkbox" name="topping" id="t1" value="치즈 추가 80g" checked>
+                <input type="checkbox" name="topping" id="t1" value="치즈 추가 80g" data-value="2500" checked>
                 <label for="t1">
                   <p>&nbsp;치즈 추가 80g(+<span>2,500원</span>)</p>
                 </label>
               </li>
               <li>
-                <input type="checkbox" name="topping" id="t2" value="페퍼로니 42g">
+                <input type="checkbox" name="topping" id="t2" value="페퍼로니 42g" data-value="2000">
                 <label for="t2">
                   <p>&nbsp;페퍼로니 42g(+<span>2,000원</span>)</p>
                 </label>
               </li>
               <li>
-                <input type="checkbox" name="topping" id="t3" value="베이컨 42g">
+                <input type="checkbox" name="topping" id="t3" value="베이컨 42g" data-value="2000">
                 <label for="t3">
                   <p>&nbsp;베이컨 42g(+<span>2,000원</span>)</p>
                 </label>
               </li>
               <li>
-                <input type="checkbox" name="topping" id="t4" value="블랙올리브 32g">
+                <input type="checkbox" name="topping" id="t4" value="블랙올리브 32g" data-value="1000">
                 <label for="t4">
                   <p>&nbsp;블랙올리브 32g(+<span>1,000원</span>)</p>
                 </label>
               </li>
               <li>
-                <input type="checkbox" name="topping" id="t5" value="파인애플 80g">
+                <input type="checkbox" name="topping" id="t5" value="파인애플 80g" data-value="1500">
                 <label for="t5">
                   <p>&nbsp;파인애플 80g(+<span>1,500원</span>)</p>
                 </label>
               </li>
               <li>
-                <input type="checkbox" name="topping" id="t6" value="브로콜리 35g">
+                <input type="checkbox" name="topping" id="t6" value="브로콜리 35g" data-value="1500">
                 <label for="t6">
                   <p>&nbsp;브로콜리 35g(+<span>1,500원</span>)</p>
                 </label>
               </li>
               <li>
-                <input type="checkbox" name="topping" id="t7" value="파프리카 60g">
+                <input type="checkbox" name="topping" id="t7" value="파프리카 60g" data-value="1500">
                 <label for="t7">
                   <p>&nbsp;파프리카 60g(+<span>1,500원</span>)</p>
                 </label>
               </li>
               <li>
-                <input type="checkbox" name="topping" id="t8" value="할라피뇨 30g">
+                <input type="checkbox" name="topping" id="t8" value="할라피뇨 30g" data-value="1000">
                 <label for="t8">
                   <p>&nbsp;할라피뇨 30g(+<span>1,000원</span>)</p>
                 </label>
               </li>
               <li>
-                <input type="checkbox" name="topping" id="t9" value="양파 45g">
+                <input type="checkbox" name="topping" id="t9" value="양파 45g" data-value="1500">
                 <label for="t9">
                   <p>&nbsp;양파 45g(+<span>1,500원</span>)</p>
                 </label>
               </li>
               <li>
-                <input type="checkbox" name="topping" id="t10" value="스위트콘 30g">
+                <input type="checkbox" name="topping" id="t10" value="스위트콘 30g" data-value="1500">
                 <label for="t10">
                   <p>&nbsp;스위트콘 30g(+<span>1,500원</span>)</p>
                 </label>
               </li>
               <li>
-                <input type="checkbox" name="topping" id="t11" value="청피망 30g">
+                <input type="checkbox" name="topping" id="t11" value="청피망 30g" data-value="1000">
                 <label for="t11">
                   <p>&nbsp;청피망 30g(+<span>1,000원</span>)</p>
                 </label>
               </li>
               <li>
-                <input type="checkbox" name="topping" id="t12" value="버섯 60g">
+                <input type="checkbox" name="topping" id="t12" value="버섯 60g" data-value="1500">
                 <label for="t12">
                   <p>&nbsp;버섯 60g(+<span>1,500원</span>)</p>
                 </label>
@@ -223,17 +245,21 @@
               <h4 id="nameS"></h4>
             </div>
             <div class="confirm">
+              <div class="list">
+                <dl>
+                  <dt>사이즈 : Medium</dt>
+                  <dd>32,000원</dd>
+                </dl>
+              </div>
               <div class="addlist">
-              </div>
-              <div class="plus">
-                <p></p>
-              </div>
-              <div class="addprice">
-                <p></p>
+                <dl>
+                  <dt></dt>
+                  <dd></dd>
+                </dl>
               </div>
             </div>
             <div class="total">
-              <h4>32,000원</h4>
+              <h4 id="totalPrice">32,000원</h4>
             </div>
 
             <div class="order">

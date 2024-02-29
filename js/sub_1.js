@@ -2,19 +2,33 @@ $(function(){
   $('.round').lettering();
 
 
-  // 토핑 추가
-  function toppingS (){
-  var add_arr = [];
-  $('input[name=topping]:checked').each(function(){
-    var addV = $(this).val()
-    add_arr.push(addV)
-  })
-  console.log(add_arr)
-}
+  $('.pizzaT').click(function(){
+    let idx = $(this).index()
+    console.log(idx)
 
-$('input:checkbox[name=topping]').change(function(){
-  toppingS();
-})
+    $(this).children('.round').addClass('active');
+    $(this).siblings().children('.round').removeClass('active');
+    $('.dotWrap').children().removeClass('border')
+    $('.dotWrap').children().eq(idx).addClass('border')
+
+    $('.pizzaS').children().css("opacity",0)
+    $('.pizzaS').children().eq(idx).css("opacity","1")
+    })
+
+
+    // 토핑 추가
+    function toppingS (){
+    var add_arr = [];
+    $('input[name=topping]:checked').each(function(){
+      var addV = $(this).val()
+      add_arr.push(addV)
+    })
+    console.log(add_arr)
+  }
+
+  $('input:checkbox[name=topping]').change(function(){
+    toppingS();
+  })
 
 
 
