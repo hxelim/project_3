@@ -113,6 +113,9 @@ $('input[name="topping"]').change(function () {
   }
 });
 
+  
+
+
 
   // totalPrice를 업데이트하는 함수
   function updateTotalPrice() {
