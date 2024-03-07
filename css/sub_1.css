@@ -212,10 +212,11 @@ button {font-size: var(--size-s);}
 .size>p { width: 100% }
 #sizeV {color: var(--lightgray); font-size: var(--size-xs);}
 .sizeOpt {display: flex; justify-content: space-between; width: 100%;}
-.sizeOpt label {width: 20%;}
+.sizeOpt label {width: 20%; background-color: var(--darkgreen); height: 40px; line-height: 40px; border-radius: 50%; font-size: var(--size-s);}
 .sizeOpt label input {display: none;}
-.sizeOpt label input:checked + p {background-color:var(--darkred);}
-.sizeOpt P { background-color: var(--darkgreen); height: 40px; line-height: 40px; border-radius: 50%;}
+.sizeOpt label input:checked + span::after {background-color:var(--darkred); position: absolute;top: 0; left: 0; width: 100%; height: 100%;}
+/* .sizeOpt P { background-color: var(--darkgreen); height: 40px; line-height: 40px; border-radius: 50%;} */
+.sizeOpt label span { font-size: var(--size-s);}
 
 
 
@@ -771,7 +772,7 @@ button {font-size: var(--size-s);}
   }
 
 @media (min-width : 1317px){
-h3 {font-size: var(--size-l); line-height: 110%;}
+h3:not() {font-size: var(--size-l); line-height: 110%;}
 h4 {font-size: var(--size-m); line-height: 110%;}
 p, li, dt, dd {font-size: var(--size-s); line-height: 110%;}
 h6 {font-size: var(--size-xs); line-height: 110%;}
