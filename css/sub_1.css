@@ -20,10 +20,11 @@
   .sizeOpt {display: flex; justify-content: space-between; width: 100%;}
   .sizeOpt label {width: 20%;}
   .sizeOpt label input {display: none;}
-  .sizeOpt label input:checked + p {background-color:var(--darkred);}
-  .sizeOpt P { background-color: var(--darkgreen); height: 40px; line-height: 40px; border-radius: 50%;}
+  /* .sizeOpt label input:checked + p {background-color:var(--darkred);}
+  .sizeOpt P { background-color: var(--darkgreen); height: 40px; line-height: 40px; border-radius: 50%;} */
   
-  
+  .sizeOpt label input:checked + span {background-color:var(--darkred);}
+.sizeOpt span { background-color: var(--darkgreen); height: 40px; line-height: 40px; border-radius: 50%; display: inline-block; width: 40px;}
   
   .menu {width: 100%; display: flex; flex-wrap: wrap; justify-content: center;}
   .pizzaWrap {width: 100%; height: 50vw; padding: 50px 30px 0 30px; overflow: hidden;position: relative; display: none;}
@@ -118,9 +119,14 @@
   .dough h4 {margin: 0;}
   .dough .edgelist {width: 100%; display: flex; justify-content: space-between; text-align: center; flex-wrap: wrap; margin: 1vw 0;}
   .dough .edgelist label {width: 18%;}
-  
-  .dough label .edgeImg {position: relative; width: 100%; height: 55%;}
-  .dough label .edgeImg img {width: 100%; height: 100%; object-fit: cover;}
+  .dough .edgelist label span{font-size: var(--size-s); line-height: 110%;}
+
+  /* .dough label .edgeImg {position: relative; width: 100%; height: 55%;}
+  .dough label .edgeImg img {width: 100%; height: 100%; object-fit: cover;} */
+  .dough .edgeImg {position: relative; width: 100%; height: 55%;}
+.dough .edgeImg img {width: 100%; height: 100%; object-fit: cover;}
+
+
   .option .boxL .dough label i {content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block;} 
   .dough label input {display: none;}
   .option .boxL .dough label input:checked + i { background-color:  rgba(236, 106, 64,0.8); }
@@ -138,7 +144,7 @@
   .option .boxL .add li input[type = "checkbox"]:checked + label:before {content: ""; background-color: var(--darkgreen); vertical-align: middle; background-image: url('../img/sub_1/btn_check.png'); background-position: center; background-repeat: no-repeat;}
   
   
-  .option .boxL .add li p {display: inline; margin: 0 10px;}
+  .option .boxL .add li span {display: inline; margin: 0 10px;  font-size: var(--size-s); line-height: 110%;}
   
   
   
@@ -212,13 +218,13 @@ button {font-size: var(--size-s);}
 .size>p { width: 100% }
 #sizeV {color: var(--lightgray); font-size: var(--size-xs);}
 .sizeOpt {display: flex; justify-content: space-between; width: 100%;}
-.sizeOpt label {width: 20%; background-color: var(--darkgreen); height: 40px; line-height: 40px; border-radius: 50%; font-size: var(--size-s);}
+.sizeOpt label {width: 20%; background-color: var(--darkgreen); height: 40px; line-height: 40px; border-radius: 50%; font-size: var(--size-s); position: relative;}
 .sizeOpt label input {display: none;}
-.sizeOpt label input:checked + span::after {background-color:var(--darkred); position: absolute;top: 0; left: 0; width: 100%; height: 100%;}
+/* .sizeOpt label input:checked + span::after {background-color:var(--darkred); position: absolute;top: 0; left: 0; width: 100%; height: 100%;} */
 /* .sizeOpt P { background-color: var(--darkgreen); height: 40px; line-height: 40px; border-radius: 50%;} */
-.sizeOpt label span { font-size: var(--size-s);}
 
-
+.sizeOpt label input:checked + span {background-color:var(--darkred); position: absolute; top: 0; left: 0;}
+.sizeOpt span { background-color: var(--darkgreen); height: 40px; line-height: 40px; border-radius: 50%; display: inline-block; width: 40px;}
 
 .menu {width: 100%; display: flex; justify-content: center; flex-wrap: wrap;}
 .pizzaWrap {width: 100%; height: 50vw; padding: 50px 30px 0 30px; overflow: hidden;position: relative; display: none;}
@@ -311,10 +317,12 @@ button {font-size: var(--size-s);}
 .option .boxL .dough {width: 50%;  display: flex ; flex-wrap: wrap; justify-content: center; background-color: var(--white); border-radius: 30px 0 0 30px; padding: 0 5%;}
 .dough h4 {margin: 0;}
 .dough .edgelist {width: 100%; display: flex; justify-content: space-between; text-align: center; flex-wrap: wrap; margin: 1vw 0;}
-.dough .edgelist label {width: 48%;}
+.dough .edgelist label {width: 48%; height: 20%;}
+.dough .edgelist label span{font-size: var(--size-s); line-height: 110%;}
 
-.dough label .edgeImg {position: relative; width: 100%; height: 55%;}
-.dough label .edgeImg img {width: 100%; height: 100%; object-fit: cover;}
+.dough .edgeImg {position: relative; width: 100%; height: 55%;}
+.dough .edgeImg img {width: 100%; height: 100%; object-fit: cover;}
+
 .option .boxL .dough label i {content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block;} 
 .dough label input {display: none;}
 .option .boxL .dough label input:checked + i { background-color:  rgba(236, 106, 64,0.8); }
@@ -332,7 +340,7 @@ button {font-size: var(--size-s);}
 .option .boxL .add li input[type = "checkbox"]:checked + label:before {content: ""; background-color: var(--darkgreen); vertical-align: middle; background-image: url('../img/sub_1/btn_check.png'); background-position: center; background-repeat: no-repeat;}
 
 
-.option .boxL .add li p {display: inline; margin: 0 10px;}
+.option .boxL .add li span {display: inline; margin: 0 10px;  font-size: var(--size-s); line-height: 110%;}
 
 
 
@@ -406,9 +414,10 @@ button {font-size: var(--size-s);}
 .sizeOpt {display: flex; justify-content: space-between; width: 100%;}
 .sizeOpt label {width: 20%;}
 .sizeOpt label input {display: none;}
-.sizeOpt label input:checked + p {background-color:var(--darkred);}
-.sizeOpt P { background-color: var(--darkgreen); height: 40px; line-height: 40px; border-radius: 50%;}
-
+/* .sizeOpt label input:checked + p {background-color:var(--darkred);}
+.sizeOpt P { background-color: var(--darkgreen); height: 40px; line-height: 40px; border-radius: 50%;} */
+.sizeOpt label input:checked + span {background-color:var(--darkred);}
+.sizeOpt span { background-color: var(--darkgreen); height: 40px; line-height: 40px; border-radius: 50%; display: inline-block; width: 40px;}
 
 
 .menu {width: 100%;}
@@ -504,9 +513,13 @@ button {font-size: var(--size-s);}
 .dough h4 {margin: 0;}
 .dough .edgelist {width: 100%; display: flex; justify-content: space-between; text-align: center;}
 .dough .edgelist label {width: 18%;}
+.dough .edgelist label span{font-size: var(--size-s); line-height: 110%;}
 
-.dough label .edgeImg {position: relative; width: 100%; height: 55%;}
-.dough label .edgeImg img {width: 100%; height: 100%; object-fit: cover;}
+/* .dough label .edgeImg {position: relative; width: 100%; height: 55%;}
+.dough label .edgeImg img {width: 100%; height: 100%; object-fit: cover;} */
+.dough .edgeImg {position: relative; width: 100%; height: 55%;}
+.dough .edgeImg img {width: 100%; height: 100%; object-fit: cover;}
+
 .option .boxL .dough label i {content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block;} 
 .dough label input {display: none;}
 .option .boxL .dough label input:checked + i { background-color:  rgba(236, 106, 64,0.8); }
@@ -524,7 +537,7 @@ button {font-size: var(--size-s);}
 .option .boxL .add li input[type = "checkbox"]:checked + label:before {content: ""; background-color: var(--darkgreen); vertical-align: middle; background-image: url('../img/sub_1/btn_check.png'); background-position: center; background-repeat: no-repeat;}
 
 
-.option .boxL .add li p {display: inline; margin: 0 0 0 0.7vw; width: 17.6991vw;}
+.option .boxL .add li span {display: inline; margin: 0 0 0 0.7vw; width: 17.6991vw;  font-size: var(--size-s); line-height: 110%;}
 
 
 
@@ -598,10 +611,11 @@ button {font-size: var(--size-s);}
   .sizeOpt {display: flex; justify-content: space-between; width: 100%;}
   .sizeOpt label {width: 20%;}
   .sizeOpt label input {display: none;}
-  .sizeOpt label input:checked + p {background-color:var(--darkred);}
-  .sizeOpt P { background-color: var(--darkgreen); height: 40px; line-height: 40px; border-radius: 50%;}
+  /* .sizeOpt label input:checked + p {background-color:var(--darkred);}
+  .sizeOpt P { background-color: var(--darkgreen); height: 40px; line-height: 40px; border-radius: 50%;} */
   
-  
+  .sizeOpt label input:checked + span {background-color:var(--darkred);}
+  .sizeOpt span { background-color: var(--darkgreen); height: 40px; line-height: 40px; border-radius: 50%; display: inline-block; width: 40px;}
   
   .menu {width: 100%;}
   .pizzaWrap {width: 100%; height: 50.8732vw; padding: 50px 30px 0 30px; overflow: hidden;position: relative;}
@@ -696,9 +710,13 @@ button {font-size: var(--size-s);}
   .dough h4 {margin: 0;}
   .dough .edgelist {width: 100%; display: flex; justify-content: space-between; text-align: center;}
   .dough .edgelist label {width: 18%;}
-  
-  .dough label .edgeImg {position: relative; width: 100%; height: 55%;}
-  .dough label .edgeImg img {width: 100%; height: 100%; object-fit: cover;}
+  .dough .edgelist label span{font-size: var(--size-s); line-height: 110%;}
+
+  /* .dough label .edgeImg {position: relative; width: 100%; height: 55%;}
+  .dough label .edgeImg img {width: 100%; height: 100%; object-fit: cover;} */
+  .dough .edgeImg {position: relative; width: 100%; height: 55%;}
+.dough .edgeImg img {width: 100%; height: 100%; object-fit: cover;}
+
   .option .boxL .dough label i {content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block;} 
   .dough label input {display: none;}
   .option .boxL .dough label input:checked + i { background-color:  rgba(236, 106, 64,0.8); }
@@ -716,9 +734,9 @@ button {font-size: var(--size-s);}
   .option .boxL .add li input[type = "checkbox"]:checked + label:before {content: ""; background-color: var(--darkgreen); vertical-align: middle; background-image: url('../img/sub_1/btn_check.png'); background-position: center; background-repeat: no-repeat;}
   
   
-  .option .boxL .add li p {display: inline; margin: 0 0 0 0.7vw; width: 17.6991vw;}
+  .option .boxL .add li span {display: inline; margin: 0 0 0 0.7vw; width: 17.6991vw; font-size: var(--size-s); line-height: 110%;}
   
-  
+
   
   .option .boxR { width: 39%; background-color: var(--lightred); height: 100%; border-radius: 50px;  padding: 2% 3%; display: flex; flex-wrap: wrap; justify-content: center; align-content: space-between;} 
   .count {display: flex;; align-items: center; flex-wrap: wrap; justify-content: center;}
@@ -771,8 +789,8 @@ button {font-size: var(--size-s);}
   .org table td {color: var(--lightgray)}
   }
 
-@media (min-width : 1317px){
-h3:not() {font-size: var(--size-l); line-height: 110%;}
+@media (min-width : 1317px) {
+h3 {font-size: var(--size-l); line-height: 110%;}
 h4 {font-size: var(--size-m); line-height: 110%;}
 p, li, dt, dd {font-size: var(--size-s); line-height: 110%;}
 h6 {font-size: var(--size-xs); line-height: 110%;}
@@ -790,8 +808,8 @@ button {font-size: var(--size-s);}
 .sizeOpt {display: flex; justify-content: space-between; width: 100%;}
 .sizeOpt label {width: 20%;}
 .sizeOpt label input {display: none;}
-.sizeOpt label input:checked + p {background-color:var(--darkred);}
-.sizeOpt P { background-color: var(--darkgreen); height: 40px; line-height: 40px; border-radius: 50%;}
+.sizeOpt label input:checked + span {background-color:var(--darkred);}
+.sizeOpt span { background-color: var(--darkgreen); height: 40px; line-height: 40px; border-radius: 50%; display: inline-block; width: 40px;}
 
 
 
@@ -879,9 +897,11 @@ button {font-size: var(--size-s);}
 .dough h4 {margin: 0;}
 .dough .edgelist {width: 100%; display: flex; justify-content: space-between; text-align: center;}
 .dough .edgelist label {width: 18%;}
-
-.dough label .edgeImg {position: relative; width: 100%; height: 55%;}
-.dough label .edgeImg img {width: 100%; height: 100%; object-fit: cover;}
+.dough .edgelist label span{font-size: var(--size-s); line-height: 110%;}
+.dough .edgeImg {position: relative; width: 100%; height: 55%;}
+.dough .edgeImg img {width: 100%; height: 100%; object-fit: cover;}
+/* .dough label .edgeImg {position: relative; width: 100%; height: 55%;}
+.dough label .edgeImg img {width: 100%; height: 100%; object-fit: cover;} */
 .option .boxL .dough label i {content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block;} 
 .dough label input {display: none;}
 .option .boxL .dough label input:checked + i { background-color:  rgba(236, 106, 64,0.8); }
@@ -899,7 +919,7 @@ button {font-size: var(--size-s);}
 .option .boxL .add li input[type = "checkbox"]:checked + label:before {content: ""; background-color: var(--darkgreen); vertical-align: middle; background-image: url('../img/sub_1/btn_check.png'); background-position: center; background-repeat: no-repeat;}
 
 
-.option .boxL .add li p {display: inline;}
+.option .boxL .add li span {display: inline; font-size: var(--size-s); line-height: 110%;}
 
 
 
@@ -952,4 +972,5 @@ button {font-size: var(--size-s);}
 .org {width: 100%; height: 150px; display: flex; flex-direction: column; justify-content: space-between;}
 .org table {height: 85%; text-align: center; line-height: 85%; border-bottom: 1px solid var(--lightgray); border-top: 1px solid var(--lightgray);}
 .org table td {color: var(--lightgray)}
+
 }

@@ -277,7 +277,7 @@ footer .container {
 
 #discount button:hover::before {
     transform: translateX(100%);
-}
+} 
 
 #discount .sns {
     width: 40%;
@@ -342,3 +342,5 @@ footer .container {
     position: absolute;
     bottom: 20px;
 }
+
+
