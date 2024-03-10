@@ -1,8 +1,4 @@
 $(function () {
-
-
-
-
   // 피자 글씨 라운드
   $('.round').lettering();
 
